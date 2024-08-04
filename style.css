@@ -15,13 +15,36 @@ body {
 
 .header {
     grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
 }
 
 .sidebar {
     grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 2fr 6fr 3fr 6fr;
+    background-color: #11aaff;
+    color: white;
+}
+
+.sidebar > div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-items: start;
+    font-size: larger;
+    column-gap: 10px;
 }
 
 .main {
     grid-row: 2 / -1;
     grid-column: 2 / -1;
+    display: grid;
 }
+
+ul {
+    list-style: none;
+}
+
+

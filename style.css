@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 2px solid black;
 }
 
 body {
@@ -21,20 +20,23 @@ body {
 }
 
 .sidebar {
+
     grid-row: 1 / -1;
     display: grid;
-    grid-template-rows: 2fr 6fr 3fr 6fr;
+    grid-template-rows: 2fr 6fr 3fr 7fr;
     background-color: #11aaff;
     color: white;
 }
 
 .sidebar > div {
+    padding-left: 10%;
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
     justify-items: start;
     font-size: larger;
     column-gap: 10px;
+    row-gap: 10px;
 }
 
 .main {
@@ -48,3 +50,16 @@ ul {
 }
 
 
+.icon {
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-content {
+    margin-top: 5%;
+}
+
+.nav-admin {
+    margin-top: 15%;
+}

@@ -228,8 +228,20 @@ input {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
+    padding: 5%;
 }
 
 .card, .announcements, .trending, .header {
     box-shadow: 0px 5px 5px #ccc;
+}
+
+
+.trending > .profile-pic {
+    height: 90%;
+    width: 90%;
+}
+
+.trending > div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }

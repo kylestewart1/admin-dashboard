@@ -16,7 +16,8 @@ body {
     grid-column-start: 2;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
 
 .sidebar {
@@ -26,6 +27,7 @@ body {
     grid-template-rows: 2fr 6fr 3fr 7fr;
     background-color: #11aaff;
     color: white;
+    font-weight: bolder;
 }
 
 .sidebar > div {
@@ -40,9 +42,12 @@ body {
 }
 
 .main {
+    background-color: #eee;
     grid-row: 2 / -1;
     grid-column: 2 / -1;
     display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 ul {
@@ -62,4 +67,169 @@ ul {
 
 .nav-admin {
     margin-top: 15%;
+}
+
+
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    gap: 5px;
+    height: 40%;
+    align-items: center;
+    justify-self: start;
+    padding-left: 10%;
+}
+
+.search {
+    height: 80%;
+}
+
+.search .btn {
+    width: 30px;
+    background-image: url("icons/magnify.svg");
+    border: none;
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    width: 600px;
+    border-radius: 30px;
+    border: none;
+    background-color: #eee;
+    text-align: center;
+}
+
+.info {
+    display: grid;
+    width: 60%;
+    padding: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: end;
+    gap: 20px;
+    align-items: center;
+    margin-right: 5%;
+    justify-self: end;
+}
+
+
+.info .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 10%;
+}
+
+.greeting .profile-pic {
+    grid-row: 1 / -1;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.content-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-btns > button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #11aaff;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.projects {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr repeat(3, 6fr);
+    gap: 30px;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.projects h2 {
+    grid-column: 1 / -1;
+}
+
+.card {
+    width: minmax(200px, 20%, 500px);
+    background: linear-gradient(90deg, orange 0% 1%, white 1% 100%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    padding: 5%;
+    gap: 5px;
+}
+
+.announcements-container, .trending-container {
+    margin-left: 4%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-rows: 1fr 6fr;    
+}
+
+.announcements {
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    padding: 5%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr 1fr 3fr;
+    gap: 5px;
+}
+
+.line {
+    height: 1px;
+    width: 95%;
+    background-color: #ccc;
+}
+
+
+
+.sharing {
+    width: 40%;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: end;
+    align-items: end;
+}
+
+.sharing > img {
+    width: 30px;
+    height: 30px;
+}
+
+.trending {
+    background-color: white;
+    height: 85%;
+    width: 90%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card, .announcements, .trending, .header {
+    box-shadow: 0px 5px 5px #ccc;
 }
